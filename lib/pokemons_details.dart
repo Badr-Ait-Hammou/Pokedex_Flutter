@@ -178,6 +178,7 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                                   color: Colors.blueGrey,fontSize: 20,
                                 ),),
                               ),
+                             widget.pokemonDetail['next_evolution']!=null?
                              SizedBox(
                                height: 20,
                                width: width*0.35,
@@ -196,9 +197,50 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                                      );
                                  }
                                ),
-                             )
+                             ):Text('None',style:TextStyle(
+                                 color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold
+
+                             ) ,)
                             ]),
                       ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children:[
+
+                              Container(
+                                width:width *0.3,
+                                child: Text("Pre Form",style: TextStyle(
+                                  color: Colors.blueGrey,fontSize: 20,
+                                ),),
+                              ),
+                              widget.pokemonDetail['prev_evolution']!=null?
+                              SizedBox(
+                                height: 20,
+                                width: width*0.35,
+                                child: ListView.builder(
+                                    scrollDirection: Axis.horizontal,
+                                    itemCount: widget.pokemonDetail['prev_evolution'].length,
+                                    itemBuilder: (context,index){
+                                      return Padding(
+                                        padding: const EdgeInsets.only(right: 8.0),
+                                        child: Text(widget.pokemonDetail['prev_evolution'][index]['name'],style: TextStyle(
+                                            color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold
+
+                                        ),
+
+                                        ),
+                                      );
+                                    }
+                                ),
+                              ):Text('Just Hatched',style:TextStyle(
+                                  color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold
+
+                              ) ,)
+                            ]),
+                      ),
+
                     ],
                   ),
                 ),

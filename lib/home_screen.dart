@@ -14,7 +14,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   //List pokedex1;
   var pokemonapi="https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json";
-  late List pokedex;
+  late List pokedex = [];
     @override
   void initState() {
     // TODO: implement initState
