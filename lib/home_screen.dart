@@ -33,12 +33,26 @@ class _HomeScreenState extends State<HomeScreen> {
           ),itemCount: pokedex.length,
           itemBuilder:(context,index){
             return Card(
-              child: Column(
-                children:[Text(
-                    pokedex[index]['name']
-                ),
-                  CachedNetworkImage(imageUrl: pokedex[index]['img']),
-                ],
+              color: Colors.teal,
+              child: Stack(
+                children: [
+                  Positioned(
+                      bottom:-10,
+                      right: -10,
+                      child: Image.asset('images/pokeball.png',height:100,fit: BoxFit.fitHeight ,)),
+                  Positioned(
+                    top: 30,
+                    left: 20,
+                    child: Text(
+                        pokedex[index]['name']
+                    ),
+                  ),
+                    
+                    Positioned(
+                      bottom: 5,
+                        right: 5,
+                        child: CachedNetworkImage(imageUrl: pokedex[index]['img'])),
+                ]
               ),
 
             );
