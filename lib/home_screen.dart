@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:badr_pokedex/main.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -9,29 +11,60 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+ // List pokedex;
   var pokemonapi="https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json";
   late List pokedex;
+    @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    if(mounted){// if the value is true the view is compleatly mounted
+      fetchPokemonData();
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: Column(
+        children: [
+           Expanded(child: GridView.builder(gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            childAspectRatio: 1.4,
+          ),itemCount: pokedex.length,
+          itemBuilder:(context,index){
+            return Card(
+              child: Column(
+                children:[Text(
+                    pokedex[index]['name']
+                ),
+                  CachedNetworkImage(imageUrl: pokedex[index]['img']),
+                ],
+              ),
 
-      body: Center(
-        child:ElevatedButton(
-          child: Text('press Button'),
-          onPressed: (){
-            fetchPokemonData();
-          },
-        ),
-      ),
+            );
+          } ,
+          ),
+           ), const Center(
+             child: CircularProgressIndicator(),
+           )
+        ],
+      )
     );
   }
   void fetchPokemonData(){
     var url = Uri.https('raw.githubusercontent.com', '/Biuni/PokemonGO-Pokedex/master/pokedex.json');
     http.get(url).then((value) {
-      var decodedJsonData=jsonDecode(value.body);
-     // print(decodedJsonData);
-      pokedex=decodedJsonData['pokemon'];
-      print(pokedex);
+      if(value.statusCode==200){
+        var decodedJsonData=jsonDecode(value.body);
+        // print(decodedJsonData);
+        pokedex=decodedJsonData['pokemon'];
+        print(pokedex[0]['name']);
+        setState(() {
+
+        });
+
+      }
+
     });
 
   }
