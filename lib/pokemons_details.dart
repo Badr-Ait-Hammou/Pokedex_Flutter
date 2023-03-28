@@ -60,7 +60,7 @@ class _PokemonDetailsState extends State<PokemonDetails> {
             bottom: 0,
             child: Container(
               width: width,
-              height: height*0.6,
+              height: height*0.58,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(30)),
                   color: Colors.white

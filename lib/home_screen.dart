@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:badr_pokedex/main.dart';
 import 'package:badr_pokedex/pokemons_details.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -26,14 +25,14 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
       var width=MediaQuery.of(context).size.width;
-      var height=MediaQuery.of(context).size.height;
+      //var height=MediaQuery.of(context).size.height;
     return Scaffold(
       body: Stack(
         children: [
           Positioned(
-            top: -50,
+            top: -20,
               right: -50,
-              child: Image.asset('images/pokeball.png', width: 200,fit: BoxFit.fitWidth ,)
+              child: Image.asset('images/DESIGN.png', width: 220,fit: BoxFit.fitWidth ,)
           ),
           Positioned(
             top: 100,
