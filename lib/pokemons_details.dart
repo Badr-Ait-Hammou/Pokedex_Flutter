@@ -77,13 +77,17 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children:[
 
-                          Container(
-                              width:width *0.3,
-                              child: Text("Name",style: TextStyle(
-                                color: Colors.blueGrey,fontSize: 20,
-                              ),),
-                          ),Container(
-                                width:width *0.3,
+                              Container(
+                                width: width * 0.36,
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.nest_cam_wired_stand, color: Colors.red, size: 20),
+                                    SizedBox(width: 5),
+                                    Text("Name", style: TextStyle(color: Colors.blueGrey, fontSize: 20)),
+                                  ],
+                                ),
+                              ),Container(
+                                width:width *0.36,
                                 child: Text(widget.pokemonDetail['name'],style: TextStyle(
                                   color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold
                                 ),),
@@ -97,12 +101,16 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                             children:[
 
                               Container(
-                                width:width *0.3,
-                                child: Text("Height",style: TextStyle(
-                                  color: Colors.blueGrey,fontSize: 20,
-                                ),),
+                                width: width * 0.36,
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.height_rounded, color: Colors.green, size: 20),
+                                    SizedBox(width: 5),
+                                    Text("Height", style: TextStyle(color: Colors.blueGrey, fontSize: 20)),
+                                  ],
+                                ),
                               ),Container(
-                                width:width *0.3,
+                                width:width *0.36,
                                 child: Text(widget.pokemonDetail['height'],style: TextStyle(
                                     color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold
                                 ),),
@@ -117,12 +125,16 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                             children:[
 
                               Container(
-                                width:width *0.3,
-                                child: Text("Candy",style: TextStyle(
-                                  color: Colors.blueGrey,fontSize: 20,
-                                ),),
+                                width: width * 0.36,
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.no_meals_sharp, color: Colors.blue, size: 20),
+                                    SizedBox(width: 5),
+                                    Text("Candy", style: TextStyle(color: Colors.blueGrey, fontSize: 20)),
+                                  ],
+                                ),
                               ),Container(
-                                width:width *0.3,
+                                width:width *0.36,
                                 child: Text(widget.pokemonDetail['candy'],style: TextStyle(
                                     color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold
                                 ),),
@@ -137,12 +149,16 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                             children:[
 
                               Container(
-                                width:width *0.3,
-                                child: Text("Weight",style: TextStyle(
-                                  color: Colors.blueGrey,fontSize: 20,
-                                ),),
+                                width: width * 0.36,
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.monitor_weight, color: Colors.indigo, size: 20),
+                                    SizedBox(width: 5),
+                                    Text("Weight", style: TextStyle(color: Colors.blueGrey, fontSize: 20)),
+                                  ],
+                                ),
                               ),Container(
-                                width:width *0.3,
+                                width:width *0.36,
                                 child: Text(widget.pokemonDetail['weight'],style: TextStyle(
                                     color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold
                                 ),),
@@ -156,12 +172,16 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                             children:[
 
                               Container(
-                                width:width *0.3,
-                                child: Text("Spawn Time",style: TextStyle(
-                                  color: Colors.blueGrey,fontSize: 20,
-                                ),),
+                                width: width * 0.36,
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.timelapse, color: Colors.orange, size: 20),
+                                    SizedBox(width: 5),
+                                    Text("Sp Time", style: TextStyle(color: Colors.blueGrey, fontSize: 20)),
+                                  ],
+                                ),
                               ),Container(
-                                width:width *0.3,
+                                width:width *0.36,
                                 child: Text(widget.pokemonDetail['spawn_time'],style: TextStyle(
                                     color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold
                                 ),),
@@ -175,10 +195,14 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                             children:[
 
                               Container(
-                                width:width *0.3,
-                                child: Text("Weaknesses",style: TextStyle(
-                                  color: Colors.blueGrey,fontSize: 20,
-                                ),),
+                                width: width * 0.36,
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.dangerous, color: Colors.redAccent, size: 20),
+                                    SizedBox(width: 5),
+                                    Text("Weaknesse", style: TextStyle(color: Colors.blueGrey, fontSize: 20)),
+                                  ],
+                                ),
                               ),Container(
                                 width:width *0.3,
                                 child: Text(widget.pokemonDetail['weaknesses'].join(','),style: TextStyle(
@@ -194,10 +218,14 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                             children:[
 
                               Container(
-                                width:width *0.3,
-                                child: Text("Evolution",style: TextStyle(
-                                  color: Colors.blueGrey,fontSize: 20,
-                                ),),
+                                width: width * 0.36,
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.emoji_events_outlined, color: Colors.yellowAccent, size: 20),
+                                    SizedBox(width: 5),
+                                    Text("Evolution", style: TextStyle(color: Colors.blueGrey, fontSize: 20)),
+                                  ],
+                                ),
                               ),
                              widget.pokemonDetail['next_evolution']!=null?
                              SizedBox(
@@ -231,10 +259,14 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                             children:[
 
                               Container(
-                                width:width *0.3,
-                                child: Text("Pre Form",style: TextStyle(
-                                  color: Colors.blueGrey,fontSize: 20,
-                                ),),
+                                width: width * 0.36,
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.precision_manufacturing_sharp, color: Colors.pinkAccent, size: 20),
+                                    SizedBox(width: 5),
+                                    Text("Pre Form", style: TextStyle(color: Colors.blueGrey, fontSize: 20)),
+                                  ],
+                                ),
                               ),
                               widget.pokemonDetail['prev_evolution']!=null?
                               SizedBox(
