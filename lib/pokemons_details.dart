@@ -52,9 +52,9 @@ class _PokemonDetailsState extends State<PokemonDetails> {
               )),
           
           Positioned(
-              top: height*0.17,
-              right: -30,
-              child: Image.asset('images/pokeball.png',height: 200,fit: BoxFit.fitWidth,)
+              top: height*0.28,
+              right: -10,
+              child: Image.asset('images/pokeball.png',height: 150,fit: BoxFit.fitWidth,)
           ),
           Positioned(
             bottom: 0,
@@ -109,6 +109,27 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                               ),
                             ]),
                       ),
+
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children:[
+
+                              Container(
+                                width:width *0.3,
+                                child: Text("Candy",style: TextStyle(
+                                  color: Colors.blueGrey,fontSize: 20,
+                                ),),
+                              ),Container(
+                                width:width *0.3,
+                                child: Text(widget.pokemonDetail['candy'],style: TextStyle(
+                                    color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold
+                                ),),
+                              ),
+                            ]),
+                      ),
+
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
@@ -247,11 +268,11 @@ class _PokemonDetailsState extends State<PokemonDetails> {
             ),
           ),
         Positioned(
-            top: height*0.17,
+            top: height*0.20,
             left: (width / 2)-100,
             child: CachedNetworkImage(
           imageUrl:widget.pokemonDetail['img'],
-          height: 200,
+          height: 210,
           fit: BoxFit.fitHeight,
         ))
         ],

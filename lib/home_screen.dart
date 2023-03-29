@@ -25,28 +25,32 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
       var width=MediaQuery.of(context).size.width;
-      //var height=MediaQuery.of(context).size.height;
+      var height=MediaQuery.of(context).size.height;
     return Scaffold(
       body: Stack(
         children: [
           Positioned(
             top: -20,
               right: -50,
-              child: Image.asset('images/DESIGN.png', width: 220,fit: BoxFit.fitWidth ,)
+              child: Image.asset('images/pokeball.png', width: 220,fit: BoxFit.fitWidth ,)
           ),
           Positioned(
-            top: 100,
+            top: 70,
               left: 20,
-              child: Text("AH_Pokedex",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.black),)),
+              child: Container(
+                width: width*0.9,
+                height:height*0.07 ,
+                color: Color(0xFF0E3311).withOpacity(0.1),
+                  child: Image.asset('images/pokemons.png',))),
           Positioned(
-            top: 150,
+            top: 140,
             bottom: 0,
             width: width,
             child: Column(
             children: [
                Expanded(child: GridView.builder(gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                childAspectRatio: 1.4,
+                crossAxisCount: 3,
+                childAspectRatio: 0.7,
               ),itemCount: pokedex.length,
               itemBuilder:(context,index){
                  var type=pokedex[index]['type'][0];
@@ -56,25 +60,29 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Container(
                       decoration: BoxDecoration(
                         color: type=='Grass'? Colors.teal : type=="Fire"?Colors.red : type =="Water" ? Colors.lightBlue : type =="Bug" ? Colors.orange : type =="Psychic" ? Colors.deepPurple : type =="Electric" ? Colors.deepOrangeAccent : type =="Poison" ? Colors.deepPurpleAccent : type =="Normal" ? Colors.indigo : type =="Ground" ? Colors.brown : type =="Rock" ? Colors.cyan:Colors.pink,
-                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                        borderRadius: BorderRadius.all(Radius.circular(15)),
                       ),
                       child: Stack(
                         children: [
                           Positioned(
-                              bottom:-10,
-                              right: -10,
-                              child: Image.asset('images/pokeball.png',
-                                height:100,
+                              bottom:-6,
+                              right: -6,
+                              child: Image.asset('images/pokemonball2.png',
+                                height:50,
                                 fit: BoxFit.fitHeight ,)),
 
                           Positioned(
-                            top: 20,
-                            left: 20,
-                            child: Text(
-                                pokedex[index]['name'],
-                              style: TextStyle(
-                              fontWeight: FontWeight.bold,fontSize: 18,color: Colors.white,
-                            ),
+
+                            child: Padding(
+
+                              padding: const EdgeInsets.only(left: 20,right: 8.0,top: 20,bottom: 4),
+                              child: Text(
+                                  pokedex[index]['name'],
+                                //textAlign: TextAlign.center,
+                                style: const TextStyle(
+                                fontWeight: FontWeight.bold,fontSize: 16,color: Colors.white,
+                              ),
+                              ),
                             ),
                           ),
 
@@ -83,7 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             left: 20,
                             child: Container(
                               child: Padding(
-                                padding: const EdgeInsets.only(left: 8.0,right: 8.0,top: 4,bottom: 4),
+                                padding: const EdgeInsets.only(left: 8.0,right: 8.0,top: 5,bottom: 4),
                                 child: Text(
                                     type.toString(),
                                   style: TextStyle(
@@ -102,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Positioned(
                               bottom: 5,
                                 right: 5,
-                                child: CachedNetworkImage(imageUrl: pokedex[index]['img'],height: 100,fit: BoxFit.fitHeight,)),
+                                child: CachedNetworkImage(imageUrl: pokedex[index]['img'],height: 105,fit: BoxFit.fitHeight,)),
                         ]
                       ),
 
