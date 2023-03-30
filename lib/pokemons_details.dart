@@ -78,7 +78,7 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                             children:[
 
                               Container(
-                                width: width * 0.36,
+                                width: width * 0.45,
                                 child: Row(
                                   children: [
                                     Icon(Icons.nest_cam_wired_stand, color: Colors.red, size: 20),
@@ -101,7 +101,7 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                             children:[
 
                               Container(
-                                width: width * 0.36,
+                                width: width * 0.45,
                                 child: Row(
                                   children: [
                                     Icon(Icons.height_rounded, color: Colors.green, size: 20),
@@ -125,7 +125,7 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                             children:[
 
                               Container(
-                                width: width * 0.36,
+                                width: width * 0.45,
                                 child: Row(
                                   children: [
                                     Icon(Icons.no_meals_sharp, color: Colors.blue, size: 20),
@@ -149,7 +149,7 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                             children:[
 
                               Container(
-                                width: width * 0.36,
+                                width: width * 0.45,
                                 child: Row(
                                   children: [
                                     Icon(Icons.monitor_weight, color: Colors.indigo, size: 20),
@@ -172,7 +172,7 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                             children:[
 
                               Container(
-                                width: width * 0.36,
+                                width: width * 0.45,
                                 child: Row(
                                   children: [
                                     Icon(Icons.timelapse, color: Colors.orange, size: 20),
@@ -195,7 +195,7 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                             children:[
 
                               Container(
-                                width: width * 0.36,
+                                width: width * 0.45,
                                 child: Row(
                                   children: [
                                     Icon(Icons.dangerous, color: Colors.redAccent, size: 20),
@@ -218,7 +218,7 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                             children:[
 
                               Container(
-                                width: width * 0.36,
+                                width: width * 0.45,
                                 child: Row(
                                   children: [
                                     Icon(Icons.emoji_events_outlined, color: Colors.yellowAccent, size: 20),
@@ -259,7 +259,7 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                             children:[
 
                               Container(
-                                width: width * 0.36,
+                                width: width * 0.45,
                                 child: Row(
                                   children: [
                                     Icon(Icons.precision_manufacturing_sharp, color: Colors.pinkAccent, size: 20),

@@ -29,19 +29,32 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: Stack(
         children: [
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('images/backgroundwallpaper.png'),
+                fit: BoxFit.cover,
+              ),
+            ),
+            child: Center(
+              child: Text('Hello, world!'),
+            ),
+          ),
           Positioned(
             top: -20,
               right: -50,
               child: Image.asset('images/pokeball.png', width: 220,fit: BoxFit.fitWidth ,)
           ),
+
           Positioned(
             top: 70,
               left: 20,
               child: Container(
                 width: width*0.9,
                 height:height*0.07 ,
-                color: Color(0xFF0E3311).withOpacity(0.1),
+                color: Color(0xFF0E3311).withOpacity(0.3),
                   child: Image.asset('images/pokemons.png',))),
+
           Positioned(
             top: 140,
             bottom: 0,
