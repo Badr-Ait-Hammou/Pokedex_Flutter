@@ -1,4 +1,4 @@
-# Badr_pokedex
+# Flutter_Pokedex
 
 ![Untitled (3)](https://user-images.githubusercontent.com/121731124/229139452-52078188-128a-4376-bb8b-59def557c5ba.png)
 
