@@ -222,6 +222,31 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                                 width: width * 0.45,
                                 child: Row(
                                   children: const [
+                                    Icon(Icons.egg_outlined, color: Colors.purpleAccent, size: 20),
+                                    SizedBox(width: 5),
+                                    Text("Avg_spawns", style: TextStyle(color: Colors.blueGrey, fontSize: 20)),
+                                  ],
+                                ),
+                              ),Container(
+                                width:width *0.36,
+                                // ignore: prefer_const_constructors
+                                child: Text(widget.pokemonDetail['avg_spawns'].toString(),style: TextStyle(
+                                    color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold
+                                ),),
+                              ),
+                            ]),
+                      ),
+
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children:[
+
+                              Container(
+                                width: width * 0.45,
+                                child: Row(
+                                  children: const [
                                     Icon(Icons.emoji_events_outlined, color: Colors.yellowAccent, size: 20),
                                     SizedBox(width: 5),
                                     Text("Evolution", style: TextStyle(color: Colors.blueGrey, fontSize: 20)),

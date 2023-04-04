@@ -39,11 +39,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
           ),
-          Positioned(
-            top: -20,
-              right: -50,
-              child: Image.asset('images/pokeball.png', width: 220,fit: BoxFit.fitWidth ,)
-          ),
 
           Positioned(
             top: 70,
