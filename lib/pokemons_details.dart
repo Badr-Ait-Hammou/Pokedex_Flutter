@@ -52,9 +52,9 @@ class _PokemonDetailsState extends State<PokemonDetails> {
               )),
           
           Positioned(
-              top: height*0.28,
+              top: height*0.22,
               right: -10,
-              child: Image.asset('images/pokeball.png',height: 150,fit: BoxFit.fitWidth,)
+              child: Image.asset('images/rose.png',height: 150,fit: BoxFit.fitWidth,)
           ),
           Positioned(
             bottom: 0,
