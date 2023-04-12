@@ -34,7 +34,7 @@ the code i have provided earlier is creating a URL for an HTTPS request to retri
 
 creating a pokedex app using DART is much easier than JAVA and KOTLEN.
 
-as you can see i only created two DART files and i added some dependencies on my pubspec.yaml sush as:
+as you can see i only created two DART files (HOME_SCREEN & POKEMON_DETAILS ) and i added some dependencies on my pubspec.yaml sush as:
 
 cupertino_icons: ^1.0.2
 
@@ -42,7 +42,7 @@ cached_network_image: ^3.0.0
 
 http: ^0.13.5
 
-...
+etc...
 
 
 
