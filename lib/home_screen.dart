@@ -11,7 +11,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  //List pokedex1;
   var pokemonapi="https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json";
   late List pokedex = [];
     @override
@@ -19,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
     // TODO: implement initState
     super.initState();
     if(mounted){// if the value is true the view is compleatly mounted
-      fetchPokemonData();
+      getAllPokemonData();
     }
   }
   @override
@@ -30,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('images/backgroundwallpaper.png'),
                 fit: BoxFit.cover,
@@ -92,19 +91,19 @@ class _HomeScreenState extends State<HomeScreen> {
                             top: 45,
                             left: 20,
                             child: Container(
+                              decoration: const BoxDecoration(
+                                borderRadius: BorderRadius.all(Radius.circular(20)),
+                                color: Colors.black12,
+
+                              ),
                               child: Padding(
                                 padding: const EdgeInsets.only(left: 8.0,right: 8.0,top: 5,bottom: 4),
                                 child: Text(
                                     type.toString(),
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     color: Colors.white,
                                   ),
                                 ),
-                              ),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.all(Radius.circular(20)),
-                                color: Colors.black12,
-
                               ),
                             ),
                           ),
@@ -137,10 +136,10 @@ class _HomeScreenState extends State<HomeScreen> {
       )
     );
   }
-  void fetchPokemonData(){
-    var url = Uri.https('raw.githubusercontent.com', '/Biuni/PokemonGO-Pokedex/master/pokedex.json');
+  void getAllPokemonData(){
+    var url = Uri.https('raw.githubusercontent.com', '/Biuni/PokemonGO-Pokedex/master/pokedex.json');//get api data
     http.get(url).then((value) {
-      if(value.statusCode==200){
+      if(value.statusCode==200){//if the request id successfully done
         var decodedJsonData=jsonDecode(value.body);
         // print(decodedJsonData);
         pokedex=decodedJsonData['pokemon'];

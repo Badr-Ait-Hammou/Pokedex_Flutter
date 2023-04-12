@@ -15,8 +15,8 @@ class PokemonDetails extends StatefulWidget {
 class _PokemonDetailsState extends State<PokemonDetails> {
   @override
   Widget build(BuildContext context) {
-    var width=MediaQuery.of(context).size.width;
-    var height=MediaQuery.of(context).size.height;
+    var width=MediaQuery.of(context).size.width;//the device width
+    var height=MediaQuery.of(context).size.height;//the device height
     return  Scaffold(
       backgroundColor:widget.color ,
       body: Stack(
@@ -25,7 +25,7 @@ class _PokemonDetailsState extends State<PokemonDetails> {
           Positioned(
             top: 30,
             left: 5,
-            child: IconButton(icon: Icon(Icons.arrow_back,color: Colors.white,size: 30,),onPressed: (){
+            child: IconButton(icon: const Icon(Icons.arrow_back,color: Colors.white,size: 30,),onPressed: (){
               Navigator.pop(context);
             },),
           ),
@@ -39,15 +39,15 @@ class _PokemonDetailsState extends State<PokemonDetails> {
             top:150,
               left: 20,
               child: Container(
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 8.0,right: 8.0,top: 4.0,bottom: 4.0),
-                  child: Text(widget.pokemonDetail['type'].join(','),style: TextStyle(
-                    color: Colors.white
-                  ),),
-                ),
                 decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(20),),
                   color: Colors.black12,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 8.0,right: 8.0,top: 4.0,bottom: 4.0),
+                  child: Text(widget.pokemonDetail['type'].join(','),style: const TextStyle(
+                    color: Colors.white
+                  ),),
                 ),
               )),
           
@@ -70,14 +70,14 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                   child: Column(
                     mainAxisAlignment:MainAxisAlignment.start ,
                     children: [
-                      SizedBox(height: 30,),
+                      const SizedBox(height: 30,),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children:[
 
-                              Container(
+                              SizedBox(
                                 width: width * 0.45,
                                 child: Row(
                                   children: const [
@@ -86,7 +86,7 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                                     Text("Name", style: TextStyle(color: Colors.blueGrey, fontSize: 20)),
                                   ],
                                 ),
-                              ),Container(
+                              ),SizedBox(
                                 width:width *0.36,
                                 child: Text(widget.pokemonDetail['name'],style: const TextStyle(
                                   color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold
@@ -100,7 +100,7 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children:[
 
-                              Container(
+                              SizedBox(
                                 width: width * 0.45,
                                 child: Row(
                                   children: const [
@@ -109,7 +109,7 @@ class _PokemonDetailsState extends State<PokemonDetails> {
                                     Text("Height", style: TextStyle(color: Colors.blueGrey, fontSize: 20)),
                                   ],
                                 ),
-                              ),Container(
+                              ),SizedBox(
                                 width:width *0.36,
                                 child: Text(widget.pokemonDetail['height'],style: const TextStyle(
                                     color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold
