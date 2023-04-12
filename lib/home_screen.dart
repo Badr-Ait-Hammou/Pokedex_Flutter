@@ -65,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     padding: const EdgeInsets.symmetric(vertical: 8.0,horizontal:12 ),
                     child: Container(
                       decoration: BoxDecoration(
-                        color: type=='Grass'? Colors.teal : type=="Fire"?Colors.red : type =="Water" ? Colors.lightBlue : type =="Bug" ? Colors.purpleAccent : type =="Psychic" ? Colors.deepPurple : type =="Electric" ? Colors.deepOrangeAccent : type =="Poison" ? Colors.deepPurpleAccent : type =="Normal" ? Colors.indigo : type =="Ground" ? Colors.brown : type =="Rock" ? Colors.cyan:Colors.pink,
+                        color: type=='Grass'? Colors.teal : type=="Fire"?Colors.red : type =="Water" ? Colors.blue : type =="Bug" ? Colors.purple : type =="Psychic" ? Colors.deepPurple : type =="Electric" ? Colors.deepOrangeAccent : type =="Poison" ? Colors.deepPurpleAccent : type =="Normal" ? Colors.indigo : type =="Ground" ? Colors.brown : type =="Rock" ? Colors.cyan:Colors.pink,
                         borderRadius: BorderRadius.all(Radius.circular(15)),
                       ),
                       child: Stack(
@@ -119,7 +119,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   onTap: (){
                     //TODO Navigate to detail screen describe each pokemon :)
-                    Navigator.push(context, MaterialPageRoute(builder: (_)=>PokemonDetails(pokemonDetail: pokedex[index], color: type=='Grass'? Colors.teal : type=="Fire"?Colors.red : type =="Water" ? Colors.lightBlue : type =="Bug" ? Colors.purpleAccent : type =="Psychic" ? Colors.deepPurple : type =="Electric" ? Colors.deepOrangeAccent : type =="Poison" ? Colors.deepPurpleAccent : type =="Normal" ? Colors.indigo : type =="Ground" ? Colors.brown : type =="Rock" ? Colors.cyan:Colors.pink,
+                    Navigator.push(context, MaterialPageRoute(builder: (_)=>PokemonDetails(pokemonDetail: pokedex[index], color: type=='Grass'? Colors.teal : type=="Fire"?Colors.red : type =="Water" ? Colors.blue : type =="Bug" ? Colors.purple: type =="Psychic" ? Colors.deepPurple : type =="Electric" ? Colors.deepOrangeAccent : type =="Poison" ? Colors.deepPurpleAccent : type =="Normal" ? Colors.indigo : type =="Ground" ? Colors.brown : type =="Rock" ? Colors.cyan:Colors.pink,
 
                         tag: index)));
                   },
