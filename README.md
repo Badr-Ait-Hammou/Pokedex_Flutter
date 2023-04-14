@@ -12,8 +12,8 @@ This project is a starting point for a Pokedex Flutter application.
 
 # to run this app :
 
-you have to install flutter on youre device ,
-For help getting started with Flutter development, view the
+you have to install flutter on your device ,
+For help "getting started with Flutter development" check the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
